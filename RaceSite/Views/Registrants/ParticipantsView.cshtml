@@ -1,0 +1,28 @@
+﻿@model ParticipantsViewModel
+@{
+    ViewData["Title"] = "Race Participants";
+    
+}
+<div class="row">
+    <h1 class="text-center col-md-12">@ViewBag.Title</h1>
+    <div class="col-md-6">
+        @foreach (Race race in Model.Race)
+        {
+            <h4>@race.RaceName</h4>
+            <ul>
+                @foreach (Registrant registrant in Model.Registrant)
+                {
+                    @if (race.ID == registrant.RaceId)
+                    {
+                        <li>@registrant.FirstName @registrant.LastName </li>
+
+
+                    }
+                }
+                             </ul>
+        }
+    </div>
+</div>
+
+
+

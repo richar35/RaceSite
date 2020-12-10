@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Race Sign Up";
+}
+<div class="jumbotron shadow" style="background-color:#5A5560; border-radius:50px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                Race your way to the finish!
+                <i class='fas fa-running' style='font-size:24px;color: #46344E'></i>
+                <i class='fas fa-running' style='font-size:36px;color: ghostwhite'></i>
+                <i class='fas fa-running' style='font-size:48px;color: #46344E'></i>
+            </h1>
+
+            <p class="lead">
+                This site is designed to help individuals sign up for running races. For a little fun, there is also a section all about shoes.
+                Shoes are an important part of racing. This site allows users to view the shoes other participants are wearing.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="jumbotron shadow" style="background-color:#5A5560; border-radius:30px;">
+    <div class="row">
+        <div class="col-md-3">
+            <h2><a asp-controller="Races" asp-action="Create">Race Registration</a></h2>
+            <p>
+                Sign up for your next race here.
+           </p>
+    </div>
+        <div class="col-md-3">
+            <h2><a asp-controller="Races" asp-action="Index">Races</a></h2>
+            <p>Future races available for registration.</p>
+        </div>
+        <div class="col-md-3">
+            <h2><a asp-controller="Registrants" asp-action="ParticipantsView">Participants</a></h2>
+            <p>List of particiapnts in each race</p>
+        </div>
+        <div class="col-md-3">
+            <h2><a asp-controller="Registrants" asp-action="ShoeView">Shoes</a></h2>
+            <p>A list of participants and the shoes they choose for their races. </p>
+        </div>
+    </div>
+    <div class="row">
+        <img src="~/images/runningC.jpg" alt="women running by water" asp-append-version="true"
+             class="float-left img-fluid col-sm-3  shadow rounded-sm" style="width:100%;" />
+        <img src="~/images/speed.jpg" alt="biking through the forest" asp-append-version="true"
+             class="float-left img-fluid col-sm-3  shadow rounded-sm" style="width:100%;" />
+        <img src="~/images/participants.jog.jpg" alt="seniors walking" asp-append-version="true"
+             class="float-left img-fluid col-sm-3  shadow rounded-sm" style="width:100%;" />
+        <img src="~/images/shoes.jpg" alt="seniors walking" asp-append-version="true"
+             class="float-left img-fluid col-sm-3  shadow rounded-sm" style="width:100%;" />
+    </div>
+</div>
+
+
+
+

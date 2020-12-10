@@ -1,0 +1,25 @@
+﻿@model ShoeViewModel
+@{
+    ViewData["Title"] = "Participants Shoes";
+
+}
+<div class="row">
+    <h1 class="text-center col-md-12">@ViewBag.Title</h1>
+    <div class="col-md-6">
+        @foreach (Shoe shoe in Model.Shoe)
+        {
+            <h4>@shoe.Name (@shoe.Brand)</h4>
+            <ul>
+                @foreach (Registrant registrant in Model.Registrant)
+                {
+                    @if (shoe.ID == registrant.ShoeId)
+                    {
+                        <li>@registrant.FirstName @registrant.LastName </li>
+
+
+                    }
+                }
+            </ul>
+        }
+    </div>
+</div>
